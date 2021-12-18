@@ -29,7 +29,9 @@
     <h3>{{ t "page.about.global_config_options" }}</h3>
     <ul>
     {{ range .globalConfigOptions }}
+    {{ if or (ne . "ADMIN_USERNAME" ) (ne . "ADMIN_PASSWORD") }}
     <li><code><strong>{{ .Key }}</strong>={{ .Value }}</code></li>
+    {{ end }}
     {{ end }}
     </ul>
 </div>
