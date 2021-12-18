@@ -29,9 +29,9 @@
     <h3>{{ t "page.about.global_config_options" }}</h3>
     <ul>
     {{ range .globalConfigOptions }}
-    {{ if (not (eq . "ADMIN_USERNAME" "ADMIN_PASSWORD")) }}
+    {{/*  {{ if (not (eq . "ADMIN_USERNAME" "ADMIN_PASSWORD")) }}  */}}
     <li><code><strong>{{ .Key }}</strong>={{ .Value }}</code></li>
-    {{ end }}
+    {{/*  {{ end }}  */}}
     {{ end }}
     </ul>
 </div>
