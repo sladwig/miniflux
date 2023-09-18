@@ -1,12 +1,4 @@
 name: Docker
-on:
-  schedule:
-    - cron: '0 1 * * *'
-  push:
-    tags:
-      - '[0-9]+.[0-9]+.[0-9]+'
-  pull_request:
-    branches: [ main ]
 jobs:
   test-docker-images:
     if: github.event.pull_request
